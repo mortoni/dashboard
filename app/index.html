@@ -16,21 +16,16 @@
     <meta content="{{app.description}}" name="description" />
     <meta content="{{app.author}}" name="author" />
     <!-- BEGIN Vendor CSS-->
-    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="node_modules/pace-progress/themes/green/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
     <link id="lazyload_placeholder">
     <!-- BEGIN Pages CSS-->
-    <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/pages-icons.css" rel="stylesheet" type="text/css">
     <link class="main-stylesheet" ng-href="{{app.layout.theme}}" rel="stylesheet" type="text/css" />
-    <!--[if lte IE 9]>
-        <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
-    <![endif]-->
-    <!--[if lt IE 9]>
-            <link href="assets/plugins/mapplic/css/mapplic-ie.css" rel="stylesheet" type="text/css" />
-    <![endif]-->
-    <script type="text/javascript">
+
+    <script >
     window.onload = function() {
         // fix for windows 8
         if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
@@ -48,41 +43,45 @@
     <div class="full-height" ui-view></div>
     <!-- BEGIN VENDOR JS -->
     <!-- JQUERY -->
-    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-bez/jquery.bez.min.js"></script>
-    <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
-    <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery-unveil/jquery.unveil.js"></script>
+    <script src="node_modules/jquery-bez/lib/jquery.bez.min.js"></script>
+
+    <script src="plugins/modernizr.custom.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="plugins/jquery-easy.js"></script>
+    <script src="plugins/jquery.ioslist.min.js"></script>
+    <script src="plugins/jquery.actual.min.js"></script>
+    <script src="plugins/jquery.scrollbar.min.js"></script>
+    <script src="plugins/classie.js"></script>
+
+
+
     <!-- ANGULAR -->
-    <script src="assets/plugins/angular/angular.js" type="text/javascript"></script>
-    <script src="assets/plugins/angular-ui-router/angular-ui-router.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/angular-ui-util/ui-utils.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/angular-oc-lazyload/ocLazyLoad.min.js" type="text/javascript"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="plugins/ui-utils.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="plugins/ocLazyLoad.min.js"></script>
     <!-- END VENDOR JS -->
     <!-- BEGIN CORE TEMPLATE JS -->
-    <script src="pages/js/pages.js" type="text/javascript"></script>
-    <script src="assets/js/app.js" type="text/javascript"></script>
-    <script src="assets/js/config.js" type="text/javascript"></script>
-    <script src="assets/js/config.lazyload.js" type="text/javascript"></script>
-    <script src="assets/js/main.js" type="text/javascript"></script>
-    <script src="assets/js/directives/pg-sidebar.js" type="text/javascript"></script>
-    <script src="assets/js/directives/cs-select.js" type="text/javascript"></script>
-    <script src="assets/js/directives/pg-dropdown.js" type="text/javascript"></script>
-    <script src="assets/js/directives/pg-form-group.js" type="text/javascript"></script>
-    <script src="assets/js/directives/pg-navigate.js" type="text/javascript"></script>
-    <script src="assets/js/directives/pg-portlet.js" type="text/javascript"></script>
-    <script src="assets/js/directives/pg-tab.js" type="text/javascript"></script>
-    <script src="assets/js/directives/pg-search.js" type="text/javascript"></script>
-    <script src="assets/js/directives/skycons.js" type="text/javascript"></script>
-    <script src="assets/js/controllers/search.js" type="text/javascript"></script>
+    <script src="assets/js/pages.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/config.lazyload.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/directives/pg-sidebar.js"></script>
+    <script src="assets/js/directives/cs-select.js"></script>
+    <script src="assets/js/directives/pg-dropdown.js"></script>
+    <script src="assets/js/directives/pg-form-group.js"></script>
+    <script src="assets/js/directives/pg-navigate.js"></script>
+    <script src="assets/js/directives/pg-portlet.js"></script>
+    <script src="assets/js/directives/pg-tab.js"></script>
+    <script src="assets/js/directives/pg-search.js"></script>
+    <script src="assets/js/directives/skycons.js"></script>
+    <script src="assets/js/controllers/search.js"></script>
     <!-- END CORE TEMPLATE JS -->
 </body>
 
