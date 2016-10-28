@@ -21,22 +21,6 @@ angular.module('app')
                     templateUrl: "tpl/home.html",
                     controller: 'HomeCtrl',
                     resolve: {
-                        deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                            return $ocLazyLoad.load([
-                                    /* 
-                                        Load any ocLazyLoad module here
-                                        ex: 'wysihtml5'
-                                        Open config.lazyload.js for available modules
-                                    */
-                                ], {
-                                    insertBefore: '#lazyload_placeholder'
-                                })
-                                .then(function() {
-                                    return $ocLazyLoad.load([
-                                        'assets/js/controllers/home.js'
-                                    ]);
-                                });
-                        }]
                     }
                 });
 

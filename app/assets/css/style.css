@@ -3,3 +3,16 @@
 * Override Pages default styles or create your own styles here
 
 */
+/*@media (max-width: 991px){
+  .header > .pull-left, .header > .pull-right {
+       position: absolute;
+  }
+}*/
+
+.copyright {
+  padding: 10px 0;
+}
+
+.my-header{
+  width: 80%;
+}

@@ -1,7 +1,7 @@
 {
-  "name": "pages-boiler-plate",
+  "name": "dashboard",
   "version": "1.0.0",
-  "description": "Pages Boiler Plate",
+  "description": "P4 Udacity- Dashboard",
   "dependencies": {
     "browser-sync": "^2.17.5",
     "gulp-jslint": "^1.0.5"
@@ -17,9 +17,16 @@
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-jshint": "^2.0.1",
     "gulp-less": "^1.3.6",
     "gulp-minify-css": "^1.2.4",
+    "gulp-ngmin": "^0.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
     "jquery": "^3.1.1",
     "jquery-bez": "^1.0.11",
     "jquery-unveil": "^1.3.2",

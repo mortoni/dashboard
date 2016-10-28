@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app" ng-controller="AppCtrl">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon" href="pages/ico/60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="{{app.description}}" name="description" />
+    <meta content="{{app.author}}" name="author" />
+
+    <link href="assets/css/styles-1.0.0.min.css" rel="stylesheet" type="text/css">
+    <script >
+    window.onload = function() {
+        // fix for windows 8
+        if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
+            document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="pages/css/windows.chrome.fix.css" />'
+    }
+    </script>
+</head>
+
+<body class="fixed-header" ng-class="{
+'bg-master-lighter': is('app.extra.timeline'),
+'no-header': is('app.social') || is('app.calendar') || is('app.maps.vector') || is('app.maps.google'),
+'menu-pin' : app.layout.menuPin,
+'menu-behind' : app.layout.menuBehind
+ }">
+    <div class="full-height" ui-view></div>
+    <script src="assets/js/bundle-1.0.1.min.js"></script>
+
+    <!-- END CORE TEMPLATE JS -->
+</body>
+
+</html>
