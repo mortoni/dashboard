@@ -1,0 +1,55 @@
+<!-- <div class="container-fluid container-fixed-lg bg-white">
+    <div class="panel panel-transparent">
+        <div class="panel-heading">
+            <div class="panel-title">Issues
+            </div>
+            <div class="pull-right">
+                <div class="col-xs-12">
+                    <input type="text" id="search-table" class="form-control pull-right" placeholder="Search" ng-keyup="vm.filter($event)">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover demo-table-search" id="tableWithSearch" ui-jq="dataTable" ui-options="vm.options">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Employee</th>
+                        <th>Status</th>
+                        <th>Description</th>
+                        <th>Submission</th>
+                        <th>Closed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="issue in vm.issues">
+                        <td class="v-align-middle semi-bold">
+                            <p>{{issue.name}}</p>
+                        </td>
+                        <td class="v-align-middle">
+                            <p>{{issue.email}}</p>
+                        </td>
+                        <td class="v-align-middle">
+                            <p>{{issue.employee}}</p>
+                        </td>
+                        <td class="v-align-middle">
+                            <p ng-if="issue.status">Open</p>
+                            <p ng-if="!issue.status">Closed</p>
+                        </td>
+                        <td class="v-align-middle">
+                            <p>{{issue.description}}</p>
+                        </td>
+                        <td class="v-align-middle">
+                            <p>{{issue.submission}}</p>
+                        </td>
+                        <td class="v-align-middle">
+                            <p ng-if="!issue.status">{{issue.closed}}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> -->

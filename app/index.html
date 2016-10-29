@@ -5,89 +5,72 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
     <title>Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="apple-touch-icon" href="pages/ico/60.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta content="{{app.description}}" name="description" />
-    <meta content="{{app.author}}" name="author" />
-    <!-- BEGIN Vendor CSS-->
-    <link href="node_modules/pace-progress/themes/green/pace-theme-flash.css" rel="stylesheet" type="text/css" />
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
-    <link id="lazyload_placeholder">
-    <!-- BEGIN Pages CSS-->
-    <link href="assets/css/pages-icons.css" rel="stylesheet" type="text/css">
-    <link class="main-stylesheet" ng-href="{{app.layout.theme}}" rel="stylesheet" type="text/css" />
+    <meta content="P4 Udacity" name="description" />
+    <meta content="Alan Mortoni" name="author" />
 
+    <link rel="icon" type="image/ico" href="dashboard.ico" />
 
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <script >
-    window.onload = function() {
-        // fix for windows 8
-        if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
-            document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="pages/css/windows.chrome.fix.css" />'
-    }
-    </script>
+    <link rel="stylesheet" href="node_modules/pace-progress/themes/red/pace-theme-flash.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/jquery.scrollbar/jquery.scrollbar.css" />
+
+    <link rel="stylesheet" href="styles/pages-icons.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
-<body class="fixed-header" ng-class="{
-'bg-master-lighter': is('app.extra.timeline'),
-'no-header': is('app.social') || is('app.calendar') || is('app.maps.vector') || is('app.maps.google'),
-'menu-pin' : app.layout.menuPin,
-'menu-behind' : app.layout.menuBehind
- }">
+<body class="fixed-header" ng-class="{'bg-master-lighter': is('app.extra.timeline'),
+                                      'no-header': is('app.social') || is('app.calendar') || is('app.maps.vector') || is('app.maps.google'),
+                                      'menu-pin' : app.layout.menuPin || is('boxed'),
+                                      'menu-behind' : app.layout.menuBehind,
+                                      'box-layout' : is('boxed'),
+                                      'horizontal-menu': is('app.layouts.horizontal'),
+                                      'rtl' : is('app.layouts.rtl')}">
+
     <div class="full-height" ui-view></div>
-    <!-- BEGIN VENDOR JS -->
-    <!-- JQUERY -->
-    <script src="node_modules/pace-progress/pace.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/jquery-unveil/jquery.unveil.js"></script>
-    <script src="node_modules/jquery-bez/lib/jquery.bez.min.js"></script>
+    <script src="node_modules/angular/angular.js" ></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+    <script src="node_modules/jquery.scrollbar/jquery.scrollbar.js"></script>
 
-    <script src="plugins/modernizr.custom.js"></script>
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script src="plugins/jquery-easy.js"></script>
-    <script src="plugins/jquery.ioslist.min.js"></script>
-    <script src="plugins/jquery.actual.min.js"></script>
-    <script src="plugins/jquery.scrollbar.min.js"></script>
-    <script src="plugins/classie.js"></script>
+    <script src="js/lib/ui.utils.min.js"></script>
+    <script src="js/lib/jquery.ioslist.min.js"></script>
+    <script src="js/lib/jquery.unveil.min.js"></script>
+    <script src="js/lib/modernizr.custom.js"></script>
+    <script src="js/lib/pages.js"></script>
 
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="routes.js"></script>
+    <script src="main.js"></script>
 
+    <script src="js/controllers/dashboard.js"></script>
+    <script src="js/controllers/data-view.js"></script>
+    
+    <script src="js/services/issues.js"></script>
 
-    <!-- ANGULAR -->
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="plugins/ui-utils.min.js"></script>
-    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="plugins/ocLazyLoad.min.js"></script>
-    <!-- END VENDOR JS -->
-    <!-- BEGIN CORE TEMPLATE JS -->
-    <script src="assets/js/pages.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/config.js"></script>
-    <script src="assets/js/config.lazyload.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/directives/pg-sidebar.js"></script>
-    <script src="assets/js/directives/cs-select.js"></script>
-    <script src="assets/js/directives/pg-dropdown.js"></script>
-    <script src="assets/js/directives/pg-form-group.js"></script>
-    <script src="assets/js/directives/pg-navigate.js"></script>
-    <script src="assets/js/directives/pg-portlet.js"></script>
-    <script src="assets/js/directives/pg-tab.js"></script>
-    <script src="assets/js/directives/pg-search.js"></script>
-    <script src="assets/js/directives/skycons.js"></script>
-
-    <script src="assets/js/controllers/search.js"></script>
-    <script src="assets/js/controllers/home.js"></script>
-
-    <!-- END CORE TEMPLATE JS -->
-</body>
-
+    <script src="js/directives/pg-sidebar.js"></script>
+    <script src="js/directives/cs-select.js"></script>
+    <script src="js/directives/pg-dropdown.js"></script>
+    <script src="js/directives/pg-form-group.js"></script>
+    <script src="js/directives/pg-navigate.js"></script>
+    <script src="js/directives/pg-portlet.js"></script>
+    <script src="js/directives/pg-tab.js"></script>
+    <script src="js/directives/pg-search.js"></script>
+    <script src="js/directives/pg-quickview.js"></script>
+    <script src="js/directives/pg-notification-center.js"></script>
+    <script src="js/directives/pg-horizontal-menu.js"></script>
+    <script src="js/directives/pg-tab-dropdownfx.js"></script>
+    <script src="js/directives/skycons.js"></script>
+  </body>
 </html>

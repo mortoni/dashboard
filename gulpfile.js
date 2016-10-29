@@ -26,11 +26,10 @@ var config = {
 gulp.task('serve', function() {
     browserSync.init({
         server: {
-            baseDir: ["app"],
+						baseDir: ["app"],
             index: "index.html",
             routes: {
-                "/node_modules": "node_modules",
-								"/plugins": "plugins"
+                "/node_modules": "node_modules"
             }
         }
     });
@@ -55,7 +54,7 @@ gulp.task('less', function () {
     .pipe(gulp.dest(config.pages+'/css/'));
 });
 
-gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts']);
+gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts', 'fonts-awesome']);
 
 gulp.task('css-min', function() {
   return gulp.src(['node_modules/pace-progress/themes/green/pace-theme-flash.css',
@@ -65,7 +64,7 @@ gulp.task('css-min', function() {
                    'app/assets/css/pages-icons.css',
                    'app/assets/css/pages.css',
                    'app/assets/css/style.css'])
-		.pipe(concatCss('styles-1.0.0.min.css'))
+		.pipe(concatCss('styles-1.0.1.min.css'))
     .pipe(cleanCSS({ keepSpecialComments: 1, processImport: false }))
     .pipe(gulp.dest('dist/app/assets/css'));
 });
@@ -108,7 +107,7 @@ gulp.task('compress', function() {
 									 'app/assets/js/main.js',
 									 'app/assets/js/directives/*.js',
 									 'app/assets/js/controllers/*.js'])
-    .pipe(concat('bundle-1.0.1.js'))
+    .pipe(concat('bundle-1.0.2.js'))
     .pipe(ngmin())
     .pipe(gulp.dest('dist/app/assets/js'))
     .pipe(rename({suffix: '.min'}))
@@ -141,4 +140,9 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
   gulp.src(['app/assets/fonts/**/*'])
       .pipe(gulp.dest('dist/app/assets/fonts'));
+});
+
+gulp.task('fonts-awesome', function() {
+  gulp.src(['node_modules/font-awesome/fonts/**/*'])
+      .pipe(gulp.dest('dist/app/font-awesome/fonts'));
 });
