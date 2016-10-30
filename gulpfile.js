@@ -6,7 +6,7 @@ var less = require('gulp-less');
 var clean = require('gulp-clean');
 var minifycss    = require('gulp-minify-css');
 var browserSync = require('browser-sync');
-var jshint = require('gulp-jshint');
+// var jshint = require('gulp-jshint');
 var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
@@ -41,9 +41,6 @@ gulp.task('serve', function() {
 
     gulp.watch('app/**/*.js').on('change', function(event) {
         console.log("Linting " + event.path);
-        gulp.src(event.path)
-            .pipe(jshint())
-            .pipe(jshint.reporter('jshint-stylish'));
     });
 });
 

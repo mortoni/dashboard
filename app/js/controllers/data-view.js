@@ -2,18 +2,28 @@
 
 /* Controllers */
 
-angular.module('app').controller('DataCtrl', ['$scope','$state', 'issuesSrv', function($scope, $state, issuesSrv) {
-      var vm = this;
+angular.module('app').controller('DataCtrl', ['$scope','$state', 'issuesSrv', '$timeout',   function($scope, $state, issuesSrv, $timeout) {
 
+    var vm = this;
+
+    vm.query = {
+      order: 'name',
+      limit: 10,
+      page: 1
+    };
+
+    acitave();
+
+    function acitave(){
       vm.issues = issuesSrv.get();
-      $scope.query = {
-        order: 'name',
-        limit: 5,
-        page: 1
-      };
+    }
 
-      if(typeof vm.issues.length === 'undefined')
-        $state.go('app.dashboard');
+    vm.onPaginate = function(page, limit) {
+      vm.promise = $timeout(function () {}, 2000);
+    };
 
+    vm.onReorder = function(order) {
+      vm.promise = $timeout(function () {}, 2000);
+    };
 
 }]);

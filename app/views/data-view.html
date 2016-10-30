@@ -2,41 +2,41 @@
   <md-toolbar class="md-table-toolbar md-default">
     <div class="md-toolbar-tools">
       <span>Issues</span>
+      <span flex></span>
     </div>
   </md-toolbar>
 
-  <!-- exact table from live demo -->
   <md-table-container>
-  <table md-table md-progress="promise">
-    <thead md-head md-order="query.order">
-      <tr md-row>
-        <th md-column md-order-by="name"><span>Name</span></th>
-        <th md-column md-numeric md-order-by="email"><span>Email</span></th>
-        <th md-column md-numeric>Description</th>
-        <th md-column md-numeric>Employee</th>
-        <th md-column md-numeric>Status</th>
-        <th md-column md-numeric>Submission</th>
-        <th md-column md-numeric>Close</th>
-      </tr>
-    </thead>
-    <tbody md-body>
-      <tr md-row ng-repeat="issue in vm.issues">
-        <td md-cell>{{issue.name}}</td>
-        <td md-cell>{{issue.email}}</td>
-        <td md-cell>{{issue.description}}</td>
-        <td md-cell>{{issue.employee}}</td>
-        <td md-cell>
-          <span ng-if="issue.status">Open</span>
-          <span ng-if="!issue.status">Closed</span>
-        </td>
-        <td md-cell>{{issue.submission}}</td>
-        <td md-cell>
-          <span ng-if="!issue.status">{{issue.closed}}</span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <table data-md-table md-progress="vm.promise">
+      <thead md-head data-md-order="vm.query.order" md-on-reorder="vm.onReorder">
+        <tr md-row>
+          <th md-column md:order:by="name"><span>Name</span></th>
+          <th md-column md:order:by="email"><span>Email</span></th>
+          <th md-column md:order:by="description"><span>Description</span></th>
+          <th md-column md:order:by="employee"><span>Employee</span></th>
+          <th md-column md:order:by="status"><span>Status</span></th>
+          <th md-column md:order:by="submission"><span>Submited</span></th>
+          <th md-column><span>Closed</span></th>
+        </tr>
+      </thead>
+      <tbody md-body>
+        <tr md-row data-ng-repeat="issue in vm.issues | filter: filter.search | orderBy: vm.query.order | limitTo: vm.query.limit : (vm.query.page - 1) * vm.query.limit">
+          <td md-cell>{{issue.name}}</td>
+          <td md-cell>{{issue.email}}</td>
+          <td md-cell>{{issue.description}}</td>
+          <td md-cell>{{issue.employee}}</td>
+          <td md-cell>
+            <span ng-if="issue.status">Closed</span>
+            <span ng-if="!issue.status">Open</span>
+          </td>
+          <td md-cell>{{issue.submission}}</td>
+          <td md-cell>
+            <span ng-if="issue.status">{{issue.closed}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </md-table-container>
 
-  <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{vm.issues.length}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
+  <data-md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15]" md-page="vm.query.page" md-total="{{vm.issues.length}}" md-on-paginate="vm.onPaginate"></data-md-table-pagination>
 </div>
