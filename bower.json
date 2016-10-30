@@ -1,0 +1,7 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular-material-data-table": "^0.10.9"
+  }
+}

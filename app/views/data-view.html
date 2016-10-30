@@ -1,55 +1,42 @@
-<!-- <div class="container-fluid container-fixed-lg bg-white">
-    <div class="panel panel-transparent">
-        <div class="panel-heading">
-            <div class="panel-title">Issues
-            </div>
-            <div class="pull-right">
-                <div class="col-xs-12">
-                    <input type="text" id="search-table" class="form-control pull-right" placeholder="Search" ng-keyup="vm.filter($event)">
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="panel-body">
-            <table class="table table-hover demo-table-search" id="tableWithSearch" ui-jq="dataTable" ui-options="vm.options">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Employee</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                        <th>Submission</th>
-                        <th>Closed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="issue in vm.issues">
-                        <td class="v-align-middle semi-bold">
-                            <p>{{issue.name}}</p>
-                        </td>
-                        <td class="v-align-middle">
-                            <p>{{issue.email}}</p>
-                        </td>
-                        <td class="v-align-middle">
-                            <p>{{issue.employee}}</p>
-                        </td>
-                        <td class="v-align-middle">
-                            <p ng-if="issue.status">Open</p>
-                            <p ng-if="!issue.status">Closed</p>
-                        </td>
-                        <td class="v-align-middle">
-                            <p>{{issue.description}}</p>
-                        </td>
-                        <td class="v-align-middle">
-                            <p>{{issue.submission}}</p>
-                        </td>
-                        <td class="v-align-middle">
-                            <p ng-if="!issue.status">{{issue.closed}}</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<div class="container-fluid container-fixed-lg bg-white">
+  <md-toolbar class="md-table-toolbar md-default">
+    <div class="md-toolbar-tools">
+      <span>Issues</span>
     </div>
-</div> -->
+  </md-toolbar>
+
+  <!-- exact table from live demo -->
+  <md-table-container>
+  <table md-table md-progress="promise">
+    <thead md-head md-order="query.order">
+      <tr md-row>
+        <th md-column md-order-by="name"><span>Name</span></th>
+        <th md-column md-numeric md-order-by="email"><span>Email</span></th>
+        <th md-column md-numeric>Description</th>
+        <th md-column md-numeric>Employee</th>
+        <th md-column md-numeric>Status</th>
+        <th md-column md-numeric>Submission</th>
+        <th md-column md-numeric>Close</th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row ng-repeat="issue in vm.issues">
+        <td md-cell>{{issue.name}}</td>
+        <td md-cell>{{issue.email}}</td>
+        <td md-cell>{{issue.description}}</td>
+        <td md-cell>{{issue.employee}}</td>
+        <td md-cell>
+          <span ng-if="issue.status">Open</span>
+          <span ng-if="!issue.status">Closed</span>
+        </td>
+        <td md-cell>{{issue.submission}}</td>
+        <td md-cell>
+          <span ng-if="!issue.status">{{issue.closed}}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </md-table-container>
+
+  <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{vm.issues.length}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
+</div>

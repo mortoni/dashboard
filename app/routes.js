@@ -17,7 +17,7 @@
                 })
                 .state('app.data', {
                     url: '/data',
-                    templateUrl: 'viewss/data-view.html',
+                    templateUrl: 'views/data-view.html',
                     controller: 'DataCtrl',
                     controllerAs: 'vm'
                 });

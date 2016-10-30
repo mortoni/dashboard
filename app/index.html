@@ -10,19 +10,22 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta content="P4 Udacity" name="description" />
-    <meta content="Alan Mortoni" name="author" />
+    <meta content="P4 Udacity" name="description"/>
+    <meta content="Alan Mortoni" name="author"/>
 
-    <link rel="icon" type="image/ico" href="dashboard.ico" />
+    <link rel="icon" type="image/ico" href="dashboard.ico"/>
 
-    <link rel="stylesheet" href="node_modules/pace-progress/themes/red/pace-theme-flash.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/jquery.scrollbar/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="node_modules/pace-progress/themes/red/pace-theme-flash.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="node_modules/jquery.scrollbar/jquery.scrollbar.css"/>
 
-    <link rel="stylesheet" href="styles/pages-icons.css" />
-    <link rel="stylesheet" href="styles/pages.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.min.css"/>
+
+    <link rel="stylesheet" href="styles/pages-icons.css"/>
+    <link rel="stylesheet" href="styles/pages.css"/>
+    <link rel="stylesheet" href="styles/styles.css"/>
 </head>
 
 <body class="fixed-header" ng-class="{'bg-master-lighter': is('app.extra.timeline'),
@@ -38,7 +41,7 @@
     <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/angular/angular.js" ></script>
+    <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="node_modules/angular-ui-grid/ui-grid.js"></script>
     <script src="node_modules/jquery.scrollbar/jquery.scrollbar.js"></script>
@@ -49,6 +52,11 @@
     <script src="js/lib/modernizr.custom.js"></script>
     <script src="js/lib/pages.js"></script>
 
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+
     <script src="app.js"></script>
     <script src="config.js"></script>
     <script src="routes.js"></script>
@@ -56,7 +64,7 @@
 
     <script src="js/controllers/dashboard.js"></script>
     <script src="js/controllers/data-view.js"></script>
-    
+
     <script src="js/services/issues.js"></script>
 
     <script src="js/directives/pg-sidebar.js"></script>

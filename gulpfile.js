@@ -29,7 +29,8 @@ gulp.task('serve', function() {
 						baseDir: ["app"],
             index: "index.html",
             routes: {
-                "/node_modules": "node_modules"
+                "/node_modules": "node_modules",
+								"/bower_components": "bower_components"
             }
         }
     });

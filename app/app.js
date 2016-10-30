@@ -2,5 +2,7 @@
 
 angular.module('app', [
     'ui.router',
-    'ui.utils'
+    'ui.utils',
+    'ngMaterial',
+    'md.data.table'
 ]);
