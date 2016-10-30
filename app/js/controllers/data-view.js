@@ -1,7 +1,5 @@
 'use strict';
 
-/* Controllers */
-
 angular.module('app').controller('DataCtrl', ['$scope','$state', 'issuesSrv', '$timeout',   function($scope, $state, issuesSrv, $timeout) {
 
     var vm = this;

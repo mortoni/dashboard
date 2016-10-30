@@ -6,7 +6,6 @@ var less = require('gulp-less');
 var clean = require('gulp-clean');
 var minifycss    = require('gulp-minify-css');
 var browserSync = require('browser-sync');
-// var jshint = require('gulp-jshint');
 var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
@@ -52,19 +51,21 @@ gulp.task('less', function () {
     .pipe(gulp.dest(config.pages+'/css/'));
 });
 
-gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts', 'fonts-awesome']);
+gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts-awesome']);
 
 gulp.task('css-min', function() {
-  return gulp.src(['node_modules/pace-progress/themes/green/pace-theme-flash.css',
+  return gulp.src(['node_modules/pace-progress/themes/red/pace-theme-flash.css',
                    'node_modules/bootstrap/dist/css/bootstrap.min.css',
                    'node_modules/font-awesome/css/font-awesome.min.css',
-                   'app/assets/css/jquery.scrollbar.css',
-                   'app/assets/css/pages-icons.css',
-                   'app/assets/css/pages.css',
-                   'app/assets/css/style.css'])
-		.pipe(concatCss('styles-1.0.1.min.css'))
+                   'node_modules/jquery.scrollbar/jquery.scrollbar.css',
+                   'bower_components/angular-material/angular-material.min.css',
+                   'bower_components/angular-material-data-table/dist/md-data-table.min.css',
+                   'app/styles/pages-icons.css',
+								 	 'app/styles/pages.css',
+							 	 	 'app/styles/styles.css'])
+		.pipe(concatCss('styles-1.0.0.min.css'))
     .pipe(cleanCSS({ keepSpecialComments: 1, processImport: false }))
-    .pipe(gulp.dest('dist/app/assets/css'));
+    .pipe(gulp.dest('dist/app/styles'));
 });
 
 
@@ -74,46 +75,42 @@ gulp.task('default', function() {
  console.log( "gulp serve" );
  console.log( "gulp watch" );
  console.log( "gulp less" );
+ console.log( "gulp dist:test" );
  console.log( "gulp build \n" );
  console.log( "----------------------------\n" );
 });
 
 gulp.task('compress', function() {
-  return gulp.src(['bower_components/jquery/dist/jquery.js',
-                   'node_modules/pace-progress/pace.min.js',
-								   'node_modules/jquery/dist/jquery.min.js',
-								 	 'node_modules/bootstrap/dist/js/bootstrap.min.js',
-								   'node_modules/jquery-unveil/jquery.unveil.js',
-								   'node_modules/jquery-bez/lib/jquery.bez.min.js',
-								   'plugins/modernizr.custom.js',
-									 'plugins/jquery-ui/jquery-ui.min.js',
-								   'plugins/jquery-easy.js',
-								 	 'plugins/jquery.ioslist.min.js',
-								   'plugins/jquery.actual.min.js',
-								   'plugins/jquery.scrollbar.min.js',
-								   'plugins/classie.js',
-									 'node_modules/angular/angular.min.js',
-									 'node_modules/angular-ui-router/release/angular-ui-router.min.js',
-									 'plugins/ui-utils.min.js',
-									 'node_modules/angular-sanitize/angular-sanitize.min.js',
-									 'plugins/ocLazyLoad.min.js',
+  return gulp.src(['node_modules/jquery/dist/jquery.min.js',
+									 'node_modules/angular/angular.js',
+								   'node_modules/angular-ui-router/release/angular-ui-router.js',
+								 	 'node_modules/angular-ui-grid/ui-grid.js',
+								 	 'node_modules/jquery.scrollbar/jquery.scrollbar.js',
+									 'app/js/lib/ui.utils.min.js',
+									 'app/js/lib/jquery.ioslist.min.js',
+									 'app/js/lib/jquery.unveil.min.js',
+									 'app/js/lib/modernizr.custom.js',
+									 'app/js/lib/pages.js',
+									 'bower_components/angular-animate/angular-animate.min.js',
+									 'bower_components/angular-aria/angular-aria.min.js',
+									 'bower_components/angular-material/angular-material.min.js',
+									 'bower_components/angular-material-data-table/dist/md-data-table.min.js',
+									 'app/app.js',
+									 'app/config.js',
+									 'app/routes.js',
+									 'app/main.js',
 									 'app/js/controllers/*.js',
-									 'app/assets/js/pages.js',
-									 'app/assets/js/app.js',
-									 'app/assets/js/config.js',
-									 'app/assets/js/config.lazyload.js',
-									 'app/assets/js/main.js',
-									 'app/assets/js/directives/*.js',
-									 'app/assets/js/controllers/*.js'])
-    .pipe(concat('bundle-1.0.2.js'))
+									 'app/js/services/*.js',
+									 'app/js/directives/*.js'])
+    .pipe(concat('bundle-1.0.0.js'))
     .pipe(ngmin())
-    .pipe(gulp.dest('dist/app/assets/js'))
+    .pipe(gulp.dest('dist/app/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify({mangle: false}))
-    .pipe(gulp.dest('dist/app/assets/js'));
+    .pipe(gulp.dest('dist/app/js'));
 });
 
-gulp.task('test', function() {
+gulp.task('dist:test', function() {
     browserSync.init({
         server: {
             baseDir: ["dist/app"],
@@ -125,19 +122,14 @@ gulp.task('test', function() {
 });
 
 gulp.task('pages', function() {
-  gulp.src(['app/tpl/**/*'])
+  gulp.src(['app/views/**/*'])
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist/app/tpl'));
+    .pipe(gulp.dest('dist/app/views'));
 });
 
 gulp.task('images', function() {
-  gulp.src(['app/assets/img/**/*'])
-      .pipe(gulp.dest('dist/app/assets/img'));
-});
-
-gulp.task('fonts', function() {
-  gulp.src(['app/assets/fonts/**/*'])
-      .pipe(gulp.dest('dist/app/assets/fonts'));
+  gulp.src(['app/images/**/*'])
+      .pipe(gulp.dest('dist/app/images'));
 });
 
 gulp.task('fonts-awesome', function() {
