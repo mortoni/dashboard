@@ -3,6 +3,7 @@
 
     angular.module('app').factory('issuesSrv', function(){
       var issues = [];
+      var data = {};
 
       function load(){
         firebase.database().ref('issues/').on('value', function(snapshot) {
@@ -12,15 +13,27 @@
             issues.push(iss[i]);
           }
         });
+
+        firebase.database().ref('data/').on('value', function(snapshot) {
+          data = snapshot.val();
+        });
+
+
       }
 
       function get(){
         return issues;
       }
 
+      function map(){
+        return data;
+      }
+
       return {
         load  : load,
-        get   : get
+        get   : get,
+        map   : map
+
       };
     });
 })();

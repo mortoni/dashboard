@@ -46,7 +46,7 @@ Generated From LESS
 html {
   height: 100%;
 }
-/* Body Triggers for layout options 
+/* Body Triggers for layout options
 ------------------------------------------------------------------
 */
 body {
@@ -141,7 +141,7 @@ body.rtl [class*="col-"] {
   right: 19px;
   left: auto;
 }
-/* Header 
+/* Header
 ------------------------------------
 */
 .header {
@@ -214,7 +214,7 @@ body.rtl [class*="col-"] {
 .header .search-link:hover {
   opacity: 1;
 }
-/* Bootstrap navbar 
+/* Bootstrap navbar
 ------------------------------------
 */
 .navbar {
@@ -241,7 +241,7 @@ body.rtl [class*="col-"] {
   border-radius: 0;
   background-color: transparent !important;
 }
-/* Main Menu Sidebar 
+/* Main Menu Sidebar
 ------------------------------------
 */
 .page-sidebar {
@@ -532,7 +532,7 @@ body.rtl [class*="col-"] {
 [data-toggle-pin="sidebar"] > i:before {
   content: "\f10c";
 }
-/* Sidebar icon holder 
+/* Sidebar icon holder
 ------------------------------------
 */
 .icon-thumbnail {
@@ -796,7 +796,7 @@ body.rtl [class*="col-"] {
   min-height: 100%;
   margin-left: 250px;
 }
-/* Quick View 
+/* Quick View
 ------------------------------------
 */
 .quickview-wrapper {
@@ -1059,7 +1059,7 @@ body.rtl [class*="col-"] {
 .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note .body .content .quick-note-editor::selection {
   background: #fef8ae;
 }
-/* Page Container 
+/* Page Container
 ------------------------------------
 */
 .page-container {
@@ -1157,7 +1157,7 @@ body.rtl [class*="col-"] {
   font-weight: 300;
   text-shadow: none;
 }
-/* Overlay Search 
+/* Overlay Search
 ------------------------------------
 */
 .overlay {
@@ -1237,7 +1237,7 @@ body.rtl [class*="col-"] {
 .jumbotron h1 {
   font-size: 44px;
 }
-/* Pages Image Icon Sent - Pixel Perfect 
+/* Pages Image Icon Sent - Pixel Perfect
 ------------------------------------
 */
 .icon-set {
@@ -2200,7 +2200,7 @@ body {
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
 }
-/* Headings 
+/* Headings
 ------------------------------------
 */
 h1,
@@ -2377,7 +2377,7 @@ hr.double {
 hr.dotted {
   border-style: dotted none none;
 }
-/* Font Sizes 
+/* Font Sizes
 ------------------------------------
 */
 .small-text {
@@ -2404,7 +2404,7 @@ hr.dotted {
 .light {
   font-weight: 300 !important;
 }
-/* Misc 
+/* Misc
 ------------------------------------
 */
 .logo {
@@ -2467,7 +2467,7 @@ hr.dotted {
 .bg-primary-lighter {
   background-color: #e2deef;
 }
-/* Complete 
+/* Complete
 ------------------------------------
 */
 .bg-complete {
@@ -2485,7 +2485,7 @@ hr.dotted {
 .bg-complete-lighter {
   background-color: #daeffd;
 }
-/* Success 
+/* Success
 ------------------------------------
 */
 .bg-success {
@@ -2521,7 +2521,7 @@ hr.dotted {
 .bg-info-lighter {
   background-color: #d8dadc;
 }
-/* Danger 
+/* Danger
 ------------------------------------
 */
 .bg-danger {
@@ -2560,7 +2560,7 @@ hr.dotted {
 /* More Color Options
 ------------------------------------
 */
-/* Menu 
+/* Menu
 ------------------------------------
 */
 .bg-menu-dark {
@@ -2822,7 +2822,7 @@ hr.dotted {
     line-height: 17px;
   }
 }
-/* For Windows : Fixes 
+/* For Windows : Fixes
 ------------------------------------
 */
 .windows body,
@@ -4077,7 +4077,7 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"] {
 .pgn .alert {
   margin: 0;
 }
-/* Simple 
+/* Simple
 ------------------------------------
 */
 .pgn-simple .alert {
@@ -4089,7 +4089,7 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"] {
   max-height: 250px;
   overflow: hidden;
 }
-/* Bar 
+/* Bar
 ------------------------------------
 */
 .pgn-bar {
@@ -4151,7 +4151,7 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"] {
     -webkit-transform: translateY(0);
   }
 }
-/* Circle 
+/* Circle
 ------------------------------------
 */
 .pgn-circle .alert {
@@ -4251,7 +4251,7 @@ body.menu-pin > .pgn-wrapper[data-position="bottom"] {
     width: 300px;
   }
 }
-/* Flip 
+/* Flip
 ------------------------------------
 */
 .pgn-wrapper[data-position^='top-'] .pgn-flip {
@@ -4553,11 +4553,11 @@ body > .pgn-wrapper {
 .progress-striped .bar-info {
   background-color: #3b4752;
 }
-/* Circular Progress : indeterminate 
+/* Circular Progress : indeterminate
 ------------------------------------
 */
 .progress-circle-indeterminate {
-  background: url('../img/progress/progress-circle-master.svg') no-repeat top left;
+  background: url('../images/progress/progress-circle-master.svg') no-repeat top left;
   width: 50px;
   height: 50px;
   background-size: 100% auto;
@@ -4581,7 +4581,7 @@ body > .pgn-wrapper {
 .progress-circle-indeterminate.progress-circle-complete {
   background-image: url('../img/progress/progress-circle-complete.svg');
 }
-/* Circular Progress 
+/* Circular Progress
 ------------------------------------
 */
 .progress-circle {
@@ -4934,7 +4934,7 @@ body > .pgn-wrapper {
 .nav-tabs.nav-tabs-right ~ .tab-content {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* Tabs : Simple 
+/* Tabs : Simple
 ------------------------------------
 */
 .nav-tabs-simple {
@@ -5121,7 +5121,7 @@ body > .pgn-wrapper {
     font-size: 0.6em;
   }
 }
-/* Tabs : Fill-up 
+/* Tabs : Fill-up
 ------------------------------------
 */
 .nav-tabs-fillup {
@@ -5949,7 +5949,7 @@ fieldset[disabled] .form-control {
   font-size: 18px;
   line-height: 22px;
 }
-/* Checkboxes and Radio buttons 
+/* Checkboxes and Radio buttons
 --------------------------------------------------
 */
 .radio,
@@ -6286,7 +6286,7 @@ body.rtl .checkbox label::after {
     width: 100%;
   }
 }
-/* Form Groups 
+/* Form Groups
 --------------------------------------------------
 */
 .form-group {
@@ -6809,7 +6809,7 @@ https://github.com/eternicode/bootstrap-datepicker
   text-shadow: none;
   border: 0;
 }
-/* Timepicker 
+/* Timepicker
 https://github.com/m3wolf/bootstrap3-timepicker
 */
 .bootstrap-timepicker-widget table td a i {
@@ -7694,7 +7694,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
 /*------------------------------------------------------------------
 [16. Tables and Datatables]
 */
-/* Generic Tables 
+/* Generic Tables
 ------------------------------------
 */
 .table {
@@ -7828,7 +7828,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
 .fht-table {
   margin-bottom: 0 !important;
 }
-/* Data-tables 
+/* Data-tables
 ------------------------------------
 */
 .table.dataTable.no-footer {
@@ -8514,7 +8514,7 @@ input.list-view-search {
   height: 100%;
   width: 100%;
 }
-/* Cover 
+/* Cover
 ------------------------------------
 */
 .social-wrapper .social .jumbotron {
@@ -8557,7 +8557,7 @@ input.list-view-search {
   min-width: 100%;
   min-height: 100%;
 }
-/* Feed 
+/* Feed
 ------------------------------------
 */
 .social-user-profile {
@@ -8584,7 +8584,7 @@ input.list-view-search {
 .social-wrapper .social .feed > .day:hover > .timeline:after {
   background: #48b0f7;
 }
-/* Cards 
+/* Cards
 ------------------------------------
 */
 .card {
@@ -8920,7 +8920,7 @@ input.list-view-search {
 /*------------------------------------------------------------------
 [20. Email App]
 */
-/* Email Components 
+/* Email Components
 --------------------------------------------------
 */
 .compose-wrapper {
@@ -9018,7 +9018,7 @@ input.list-view-search {
   min-height: 130px !important;
   width: 100% !important;
 }
-/* Email App Top Header 
+/* Email App Top Header
 --------------------------------------------------
 */
 .header-wrapper-email {
@@ -9030,7 +9030,7 @@ input.list-view-search {
 .header-wrapper-email .btn:hover {
   text-decoration: none;
 }
-/* Responsive Handler : Email App 
+/* Responsive Handler : Email App
 --------------------------------------------------
 */
 @media (max-width: 1024px) {
@@ -9821,7 +9821,7 @@ Responsive Util
   position: absolute;
   top: 50%;
 }
-/* Responsive Handlers : Lockscreen 
+/* Responsive Handlers : Lockscreen
 ------------------------------------
 */
 @media (max-width: 767px) {
@@ -9856,7 +9856,7 @@ Responsive Util
   Adapted from Vertical Timeline by Sebastiano Guerriero
   http://codyhouse.co/gem/vertical-timeline/
 */
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
@@ -9883,9 +9883,9 @@ Modules - reusable parts of our design
   background-color: #fff;
   z-index: 10;
 }
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 .timeline {
@@ -10571,7 +10571,7 @@ Main components
   }
 }
 /*------------------------------------------------------------------
-[26. Vector Map : Mapplic Plugin] 
+[26. Vector Map : Mapplic Plugin]
 */
 .mapplic-container {
   width: 100%;
@@ -10579,7 +10579,7 @@ Main components
 }
 .mapplic-container .mapplic-fullscreen-button {
   left: auto;
-  right: 154px;
+  right: 0px;
   bottom: 0;
   top: auto;
 }
@@ -10587,7 +10587,6 @@ Main components
   visibility: hidden;
 }
 .mapplic-tooltip:before {
-  content: "Location";
   font-size: 12px;
   margin: 0;
   line-height: normal;
@@ -10607,9 +10606,9 @@ Main components
   color: #626262;
   opacity: .7;
 }
-.mapplic-tooltip-title {
+/*.mapplic-tooltip-title {
   display: none;
-}
+}*/
 .mapplic-tooltip-content {
   margin-top: 5px;
 }
@@ -10633,80 +10632,80 @@ Main components
   z-index: 1;
 }
 .mapplic-pin {
-  background-image: url('../../assets/img/maps/marker-master.svg');
+  background-image: url('../images/maps/marker-master.svg');
   background-size: contain;
 }
 .mapplic-pin.pulse {
-  background-image: url('../../assets/img/maps/pulse-master.svg');
+  background-image: url('../../images/maps/pulse-master.svg');
 }
 .mapplic-pin.pulse.green {
-  background-image: url('../../assets/img/maps/pulse-success.svg');
+  background-image: url('../images/maps/pulse-success.svg');
 }
 .mapplic-pin.pulse.blue {
-  background-image: url('../../assets/img/maps/pulse-complete.svg');
+  background-image: url('../images/maps/pulse-complete.svg');
 }
 .mapplic-pin.pulse.purple {
-  background-image: url('../../assets/img/maps/pulse-primary.svg');
+  background-image: url('../images/maps/pulse-primary.svg');
 }
 .mapplic-pin.pulse.yellow {
-  background-image: url('../../assets/img/maps/pulse-warning.svg');
+  background-image: url('../images/maps/pulse-warning.svg');
 }
 .mapplic-pin.pulse.red {
-  background-image: url('../../assets/img/maps/pulse-danger.svg');
+  background-image: url('../images/maps/pulse-danger.svg');
 }
 .mapplic-pin.pulse-alt {
-  background-image: url('../../assets/img/maps/pulse-alt-master.svg');
+  background-image: url('../images/maps/pulse-alt-master.svg');
 }
 .mapplic-pin.pulse-alt.green {
-  background-image: url('../../assets/img/maps/pulse-alt-success.svg');
+  background-image: url('../images/maps/pulse-alt-success.svg');
 }
 .mapplic-pin.pulse-alt.blue {
-  background-image: url('../../assets/img/maps/pulse-alt-complete.svg');
+  background-image: url('../images/maps/pulse-alt-complete.svg');
 }
 .mapplic-pin.pulse-alt.purple {
-  background-image: url('../../assets/img/maps/pulse-alt-primary.svg');
+  background-image: url('../images/maps/pulse-alt-primary.svg');
 }
 .mapplic-pin.pulse-alt.yellow {
-  background-image: url('../../assets/img/maps/pulse-alt-warning.svg');
+  background-image: url('../images/maps/pulse-alt-warning.svg');
 }
 .mapplic-pin.pulse-alt.red {
-  background-image: url('../../assets/img/maps/pulse-alt-danger.svg');
+  background-image: url('../images/maps/pulse-alt-danger.svg');
 }
 .mapplic-pin.marker {
-  background-image: url('../../assets/img/maps/marker-master.svg');
+  background-image: url('../images/maps/marker-master.svg');
 }
 .mapplic-pin.marker.green {
-  background-image: url('../../assets/img/maps/marker-success.svg');
+  background-image: url('../images/maps/marker-success.svg');
 }
 .mapplic-pin.marker.blue {
-  background-image: url('../../assets/img/maps/marker-complete.svg');
+  background-image: url('../images/maps/marker-complete.svg');
 }
 .mapplic-pin.marker.purple {
-  background-image: url('../../assets/img/maps/marker-primary.svg');
+  background-image: url('../images/maps/marker-primary.svg');
 }
 .mapplic-pin.marker.yellow {
-  background-image: url('../../assets/img/maps/marker-warning.svg');
+  background-image: url('../images/maps/marker-warning.svg');
 }
 .mapplic-pin.marker.red {
-  background-image: url('../../assets/img/maps/marker-danger.svg');
+  background-image: url('../images/maps/marker-danger.svg');
 }
 .mapplic-pin.marker-alt {
-  background-image: url('../../assets/img/maps/marker-alt-master.svg');
+  background-image: url('../images/maps/marker-alt-master.svg');
 }
 .mapplic-pin.marker-alt.green {
-  background-image: url('../../assets/img/maps/marker-alt-success.svg');
+  background-image: url('../images/maps/marker-alt-success.svg');
 }
 .mapplic-pin.marker-alt.blue {
-  background-image: url('../../assets/img/maps/marker-alt-complete.svg');
+  background-image: url('../images/maps/marker-alt-complete.svg');
 }
 .mapplic-pin.marker-alt.purple {
-  background-image: url('../../assets/img/maps/marker-alt-primary.svg');
+  background-image: url('../images/maps/marker-alt-primary.svg');
 }
 .mapplic-pin.marker-alt.yellow {
-  background-image: url('../../assets/img/maps/marker-alt-warning.svg');
+  background-image: url('../images/maps/marker-alt-warning.svg');
 }
 .mapplic-pin.marker-alt.red {
-  background-image: url('../../assets/img/maps/marker-alt-danger.svg');
+  background-image: url('../images/maps/marker-alt-danger.svg');
 }
 /*------------------------------------------------------------------
 [27. Pricing]
@@ -10808,7 +10807,7 @@ Main components
   opacity: .69;
 }
 .widget-1:after {
-  background-image: url("../../assets/img/dashboard/pages_hero.jpg");
+  background-image: url("../images/dashboard/pages_hero.jpg");
   background-size: cover;
   content: " ";
   left: 0;
@@ -10849,7 +10848,7 @@ Main components
   background: rgba(255, 255, 255, 0.3);
 }
 .widget-2:after {
-  background-image: url("../../assets/img/social/person-cropped.jpg");
+  background-image: url("../images/social/person-cropped.jpg");
 }
 .widget-3 a {
   text-decoration: none;
@@ -11058,7 +11057,7 @@ Main components
 }
 .widget-18-post {
   height: 342px;
-  background: url('../../assets/img/social/quote.jpg');
+  background: url('../images/social/quote.jpg');
   background-position: center center;
   background-size: cover;
 }
@@ -11148,7 +11147,7 @@ Main components
   transition: transform 0.25s ease;
   -webkit-backface-visibility: hidden;
 }
-/* Thumbnail for icons and profile pics 
+/* Thumbnail for icons and profile pics
 ------------------------------------
 */
 .thumbnail-wrapper {
@@ -11289,14 +11288,14 @@ Main components
   background: transparent;
   border: none;
 }
-/* Scroll 
+/* Scroll
 ------------------------------------
 */
 .scrollable {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-/* Overides 
+/* Overides
 ------------------------------------
 */
 .no-padding {
@@ -11396,7 +11395,7 @@ Main components
 .scroll-x-hidden {
   overflow-x: hidden !important;
 }
-/* Generic Padding Helpers 
+/* Generic Padding Helpers
 ------------------------------------
 */
 .p-t-0 {
@@ -11987,7 +11986,7 @@ Main components
 .b-blank {
   border-color: #000;
 }
-/* Border Helpers 
+/* Border Helpers
 ------------------------------------
 */
 .b-a,
@@ -12252,7 +12251,7 @@ Main components
 .col-bottom {
   vertical-align: bottom !important;
 }
-/* columns of same height styles 
+/* columns of same height styles
 ------------------------------------
 */
 .container-xs-height {
@@ -12377,7 +12376,7 @@ Main components
   opacity: 0.87;
 }
 .builder a.active:before {
-  background-image: url('../../assets/img//demo/tick.svg');
+  background-image: url('../images//demo/tick.svg');
   width: 23px;
   height: 23px;
   content: '';
@@ -12498,7 +12497,7 @@ Main components
 .previewer {
   height: 35px;
 }
-/* Demo Widths For GIF Animations 
+/* Demo Widths For GIF Animations
 ------------------------------------
 */
 .demo-bg-hinted {

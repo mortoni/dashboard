@@ -4,5 +4,6 @@ angular.module('app', [
     'ui.router',
     'ui.utils',
     'ngMaterial',
-    'md.data.table'
+    'md.data.table',
+    'chart.js'
 ]);

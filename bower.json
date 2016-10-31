@@ -2,6 +2,7 @@
   "name": "dashboard",
   "version": "1.0.0",
   "dependencies": {
-    "angular-material-data-table": "^0.10.9"
+    "angular-material-data-table": "^0.10.9",
+    "angular-chart.js": "^1.0.3"
   }
 }
