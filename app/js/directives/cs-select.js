@@ -3,6 +3,8 @@
  * AngularJS directive for SelectFx jQuery plugin
  * https://github.com/codrops/SelectInspiration
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('csSelect', function() {
@@ -18,3 +20,5 @@ angular.module('app')
             }
         };
     });
+    
+})();

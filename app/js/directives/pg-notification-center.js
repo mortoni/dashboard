@@ -2,6 +2,8 @@
  * Directive: pgNotificationCenter
  * Shows a list of notifications in a dropdown in header
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgNotificationCenter', function() {
@@ -21,3 +23,5 @@ angular.module('app')
             }
         }
     });
+
+})();

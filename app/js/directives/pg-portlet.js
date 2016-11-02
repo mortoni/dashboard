@@ -2,6 +2,8 @@
  * Directive: pgPortlet
  * AngularJS directive for Pages Portlets jQuery plugin
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgPortlet', ['$parse', function($parse) {
@@ -27,3 +29,5 @@ angular.module('app')
             }
         }
     }]);
+
+})();

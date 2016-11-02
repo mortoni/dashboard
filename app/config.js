@@ -1,6 +1,6 @@
 (function(){
      'use strict';
-     angular.module('app').run(['issuesSrv', function(issuesSrv) {
+     angular.module('app').run(function() {
        // Initialize Firebase
        var config = {
          apiKey: "AIzaSyDBCC2NgMZ4VlAAq8TN6n_TBvjW-FxwWEs",
@@ -11,6 +11,5 @@
        };
 
        firebase.initializeApp(config);
-       issuesSrv.load();
-     }]);
+     });
 })();

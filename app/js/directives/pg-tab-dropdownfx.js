@@ -1,8 +1,10 @@
 /* ============================================================
  * Directive: pgTabDropdownfx
  * Responsive Tabs with dropdown effect
- * effect for tab transitions. 
+ * effect for tab transitions.
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgTabDropdownfx', function() {
@@ -15,7 +17,7 @@ angular.module('app')
                 for(var i = 1; i <= drop.children("li").length; i++){
                     var li = drop.children("li:nth-child("+i+")");
                     var selected ="";
-                    if(li.hasClass("active")){    
+                    if(li.hasClass("active")){
                         selected="selected";
                     }
                     content +='<option value="'+ li.children('a').attr('href')+'" '+selected+'>';
@@ -28,7 +30,7 @@ angular.module('app')
                 $(select).on('change', function (e) {
                     var optionSelected = $("option:selected", this);
                     var valueSelected = this.value;
-                    drop.find('a[href="'+valueSelected+'"]').tab('show') 
+                    drop.find('a[href="'+valueSelected+'"]').tab('show')
                 })
                 $(select).wrap('<div class="nav-tab-dropdown cs-wrapper full-width p-t-10 visible-xs visible-sm"></div>');
                 new SelectFx(select);
@@ -36,3 +38,5 @@ angular.module('app')
             }
         };
     });
+
+})();

@@ -2,6 +2,8 @@
  * Directive: pgFormGroup
  * Apply Pages default form effects
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgFormGroup', function() {
@@ -11,7 +13,7 @@ angular.module('app')
                 $(element).on('click', function() {
                     $(this).find(':input').focus();
                 });
-                
+
                 $('body').on('focus', '.form-group.form-group-default :input', function() {
                     $('.form-group.form-group-default').removeClass('focused');
                     $(this).parents('.form-group').addClass('focused');
@@ -34,3 +36,5 @@ angular.module('app')
             }
         }
     });
+
+})();

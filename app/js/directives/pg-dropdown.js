@@ -2,6 +2,8 @@
  * Directive: pgDropdown
  * Prepare Bootstrap dropdowns to match Pages theme
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgDropdown', function() {
@@ -25,3 +27,5 @@ angular.module('app')
             }
         }
     });
+
+})();

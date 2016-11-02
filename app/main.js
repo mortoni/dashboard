@@ -1,7 +1,9 @@
 /* ============================================================
  * File: main.js
- * Main Controller to set global scope variables. 
+ * Main Controller to set global scope variables.
  * ============================================================ */
+ (function(){
+     'use strict';
 
 angular.module('app')
     .controller('AppCtrl', ['$scope', '$rootScope', '$state', function($scope, $rootScope, $state) {
@@ -35,14 +37,16 @@ angular.module('app')
         }
 
     }]);
+})();
 
-
+(function(){
+    'use strict';
 angular.module('app')
     /*
-        Use this directive together with ng-include to include a 
+        Use this directive together with ng-include to include a
         template file by replacing the placeholder element
     */
-    
+
     .directive('includeReplace', function() {
         return {
             require: 'ngInclude',
@@ -51,4 +55,5 @@ angular.module('app')
                 el.replaceWith(el.children());
             }
         };
-    })
+    });
+})();

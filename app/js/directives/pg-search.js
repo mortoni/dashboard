@@ -2,6 +2,8 @@
  * Directive: pgSearch
  * AngularJS directive for Pages Overlay Search jQuery plugin
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgSearch', ['$parse', function($parse) {
@@ -21,3 +23,5 @@ angular.module('app')
             }
         }
     }]);
+
+})();

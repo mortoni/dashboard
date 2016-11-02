@@ -51,7 +51,7 @@ gulp.task('less', function () {
     .pipe(gulp.dest(config.pages+'/css/'));
 });
 
-gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts-awesome', 'api']);
+gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts-awesome', 'api', 'mapplic']);
 
 gulp.task('css-min', function() {
   return gulp.src(['node_modules/pace-progress/themes/red/pace-theme-flash.css',
@@ -60,11 +60,12 @@ gulp.task('css-min', function() {
                    'node_modules/jquery.scrollbar/jquery.scrollbar.css',
                    'bower_components/angular-material/angular-material.min.css',
                    'bower_components/angular-material-data-table/dist/md-data-table.min.css',
+									 'bower_components/nvd3/build/nv.d3.css',
 									 'app/js/lib/mapplic/css/mapplic.css',
                    'app/styles/pages-icons.css',
 								 	 'app/styles/pages.css',
 							 	 	 'app/styles/styles.css'])
-		.pipe(concatCss('styles-1.0.2.min.css'))
+		.pipe(concatCss('styles-1.0.5.min.css'))
     .pipe(cleanCSS({ keepSpecialComments: 1, processImport: false }))
     .pipe(gulp.dest('dist/app/styles'));
 });
@@ -101,6 +102,10 @@ gulp.task('compress', function() {
 									 'bower_components/angular-material-data-table/dist/md-data-table.min.js',
 									 'bower_components/chart.js/dist/Chart.min.js',
 									 'bower_components/angular-chart.js/dist/angular-chart.min.js',
+									 'bower_components/angularfire/dist/angularfire.min.js',
+									 'bower_components/d3/d3.js',
+									 'bower_components/nvd3/build/nv.d3.js',
+									 'bower_components/angular-nvd3/dist/angular-nvd3.js',
 									 'app/app.js',
 									 'app/config.js',
 									 'app/routes.js',
@@ -108,7 +113,7 @@ gulp.task('compress', function() {
 									 'app/js/controllers/*.js',
 									 'app/js/services/*.js',
 									 'app/js/directives/*.js'])
-    .pipe(concat('bundle-1.0.1.js'))
+    .pipe(concat('bundle-1.0.5.js'))
     .pipe(ngmin())
     .pipe(gulp.dest('dist/app/js'))
     .pipe(rename({suffix: '.min'}))
@@ -141,6 +146,11 @@ gulp.task('images', function() {
 gulp.task('api', function() {
   gulp.src(['app/api/**/*'])
       .pipe(gulp.dest('dist/app/api'));
+});
+
+gulp.task('mapplic', function() {
+  gulp.src(['app/js/lib/mapplic/css/images/**/*'])
+      .pipe(gulp.dest('dist/app/js/lib/mapplic/css/images'));
 });
 
 gulp.task('fonts-awesome', function() {

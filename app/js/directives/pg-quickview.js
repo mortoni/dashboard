@@ -2,6 +2,8 @@
  * Directive: pgQuickview
  * AngularJS directive for Pages Overlay Search jQuery plugin
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgQuickview', ['$parse', function($parse) {
@@ -14,3 +16,5 @@ angular.module('app')
             }
         }
     }]);
+
+})();

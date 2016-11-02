@@ -3,6 +3,8 @@
  * AngularJS directive for skycons plugin
  * http://darkskyapp.github.io/skycons/
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('skycons', function() {
@@ -15,3 +17,5 @@ angular.module('app')
             }
         }
     });
+
+})();

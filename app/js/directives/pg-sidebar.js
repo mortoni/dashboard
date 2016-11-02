@@ -2,6 +2,8 @@
  * Directive: pgSidebar
  * AngularJS directive for Pages Sidebar jQuery plugin
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgSidebar', function() {
@@ -26,9 +28,9 @@ angular.module('app')
                      if(li.hasClass("active open")){
                         el.children('.arrow').removeClass("active open");
                         sub.slideUp(200, function() {
-                            li.removeClass("active open"); 
+                            li.removeClass("active open");
                         });
-                        
+
                      }else{
                         parent.children('li.open').children('.sub-menu').slideUp(200);
                         parent.children('li.open').children('a').children('.arrow').removeClass('active open');
@@ -44,3 +46,5 @@ angular.module('app')
             }
         }
     });
+
+})();

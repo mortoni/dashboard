@@ -2,6 +2,8 @@
  * Directive: pgNavigate
  * Pre-made view ports to be used for HTML5 mobile hybrid apps
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgNavigate', function() {
@@ -23,3 +25,5 @@ angular.module('app')
             }
         }
     });
+
+})();

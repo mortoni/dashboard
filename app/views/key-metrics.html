@@ -1,4 +1,176 @@
-<div class="container-fluid container-fixed-lg bg-white">
+<div class="container-fluid padding-25 sm-padding-10">
+  <div class="col-xs-12 p-t-15">
+    <div class="m-b-10">
+      <div class="row">
+              <!-- START WIDGET -->
+              <div class="col-md-4 col-lg-3 col-xlg-2 ">
+              <div class="widget-8 panel no-border bg-success no-margin widget-loader-bar" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                  <div class="container-xs-height full-height">
+                      <div class="row-xs-height">
+                          <div class="col-xs-height col-top">
+                              <div class="panel-heading top-left top-right">
+                                  <div class="panel-title text-black hint-text">
+                                      <span class="font-montserrat fs-11 all-caps">Open Issues
+                                              </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-xs-height ">
+                          <div class="col-xs-height col-top relative">
+                              <div class="row">
+                                  <div class="col-sm-6">
+                                      <div class="p-l-20">
+                                          <h3 class="no-margin p-b-5 text-white">{{vm.open_issues}}</h3>
+                                          <p class="small hint-text m-t-5">
+                                              <span class="label  font-montserrat m-r-5">{{vm.higher}}%</span>Higher
+                                          </p>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                  </div>
+                              </div>
+                              <div class="widget-8-chart line-chart" data-line-color="black" data-points="true" data-point-color="success" data-stroke-width="2">
+                                <svg><g class="nvd3 nv-wrap nv-lineChart" transform="translate(-10,10)"><g>
+                                  <rect width="181" height="103" style="opacity: 0;"></rect>
+                                  <g class="nv-x nv-axis"></g>
+                                  <g class="nv-y nv-axis"></g>
+                                  <g class="nv-linesWrap">
+                                    <g class="nvd3 nv-wrap nv-line" transform="translate(0,0)">
+                                      <defs>
+                                        <clipPath id="nv-edge-clip-2597">
+                                          <rect width="181" height="103"></rect>
+                                        </clipPath>
+                                      </defs>
+                                      <g clip-path="">
+                                        <g class="nv-groups">
+                                          <g class="nv-group nv-series-0" style="stroke-opacity: 1; fill-opacity: 0.5; fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);">
+                                            <path class="nv-line" d="M0,103L30.16666666666667,75.53333333333333L60.33333333333334,34.33333333333334L90.5,27.46666666666667L120.66666666666669,0L150.83333333333334,13.733333333333334L181,68.66666666666667"></path>
+                                          </g>
+                                        </g>
+                                        <g class="nv-scatterWrap" clip-path="">
+                                          <g class="nvd3 nv-wrap nv-scatter nv-chart-2597" transform="translate(0,0)">
+                                            <defs>
+                                              <clipPath id="nv-edge-clip-2597">
+                                                <rect width="181" height="103"></rect>
+                                              </clipPath>
+                                            </defs>
+                                            <g clip-path="">
+                                              <g class="nv-groups">
+                                                <g class="nv-group nv-series-0" style="stroke-opacity: 1; fill-opacity: 0.5; stroke: rgb(0, 0, 0); fill: rgb(0, 0, 0);">
+                                                  <circle cx="0" cy="103" r="3" class="nv-point nv-point-0" style="stroke-width: 2px;"></circle>
+                                                  <circle cx="30.16666666666667" cy="75.53333333333333" r="3" class="nv-point nv-point-1" style="stroke-width: 2px;"></circle>
+                                                  <circle cx="60.33333333333334" cy="34.33333333333334" r="3" class="nv-point nv-point-2" style="stroke-width: 2px;"></circle>
+                                                  <circle cx="90.5" cy="27.46666666666667" r="3" class="nv-point nv-point-3" style="stroke-width: 2px;"></circle>
+                                                  <circle cx="120.66666666666669" cy="0" r="3" class="nv-point nv-point-4" style="stroke-width: 2px;"></circle>
+                                                  <circle cx="150.83333333333334" cy="13.733333333333334" r="3" class="nv-point nv-point-5" style="stroke-width: 2px;"></circle>
+                                                  <circle cx="181" cy="68.66666666666667" r="3" class="nv-point nv-point-6" style="stroke-width: 2px;"></circle>
+                                                </g>
+                                              </g>
+                                              <g class="nv-point-paths"></g>
+                                            </g>
+                                          </g>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </g>
+                                  <g class="nv-legendWrap"></g>
+                                  <g class="nv-interactive"></g>
+                                </g>
+                              </g>
+                            </svg>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+              <!-- END WIDGET -->
+
+      </div>
+      <!-- <div class="widget-8 panel no-border bg-success no-margin widget-loader-bar">
+        <div class="container-xs-height full-height">
+          <div class="row-xs-height">
+            <div class="col-xs-height col-top">
+              <div class="panel-heading top-left top-right">
+                <div class="panel-title text-black hint-text">
+                  <span class="font-montserrat fs-11 all-caps">Open Issues </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-xs-height ">
+            <div class="col-xs-height col-top relative">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="p-l-20">
+                    <h3 class="no-margin p-b-5 text-white">{{vm.open_issues}}</h3>
+                    <p class="small hint-text m-t-5">
+                      <span class="label  font-montserrat m-r-5">{{vm.higher}}%</span>Higher
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                </div>
+              </div>
+              <div class="widget-8-chart line-chart" data-line-color="black" data-points="true" data-point-color="success" data-stroke-width="2">
+                <svg><g class="nvd3 nv-wrap nv-lineChart" transform="translate(-10,10)"><g>
+                  <rect width="181" height="103" style="opacity: 0;"></rect>
+                  <g class="nv-x nv-axis"></g>
+                  <g class="nv-y nv-axis"></g>
+                  <g class="nv-linesWrap">
+                    <g class="nvd3 nv-wrap nv-line" transform="translate(0,0)">
+                      <defs>
+                        <clipPath id="nv-edge-clip-2597">
+                          <rect width="181" height="103"></rect>
+                        </clipPath>
+                      </defs>
+                      <g clip-path="">
+                        <g class="nv-groups">
+                          <g class="nv-group nv-series-0" style="stroke-opacity: 1; fill-opacity: 0.5; fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0);">
+                            <path class="nv-line" d="M0,103L30.16666666666667,75.53333333333333L60.33333333333334,34.33333333333334L90.5,27.46666666666667L120.66666666666669,0L150.83333333333334,13.733333333333334L181,68.66666666666667"></path>
+                          </g>
+                        </g>
+                        <g class="nv-scatterWrap" clip-path="">
+                          <g class="nvd3 nv-wrap nv-scatter nv-chart-2597" transform="translate(0,0)">
+                            <defs>
+                              <clipPath id="nv-edge-clip-2597">
+                                <rect width="181" height="103"></rect>
+                              </clipPath>
+                            </defs>
+                            <g clip-path="">
+                              <g class="nv-groups">
+                                <g class="nv-group nv-series-0" style="stroke-opacity: 1; fill-opacity: 0.5; stroke: rgb(0, 0, 0); fill: rgb(0, 0, 0);">
+                                  <circle cx="'{vm.test}'" cy="103" r="3" class="nv-point nv-point-0" style="stroke-width: 2px;"></circle>
+                                  <circle cx="30.16666666666667" cy="75.53333333333333" r="3" class="nv-point nv-point-1" style="stroke-width: 2px;"></circle>
+                                  <circle cx="60.33333333333334" cy="34.33333333333334" r="3" class="nv-point nv-point-2" style="stroke-width: 2px;"></circle>
+                                  <circle cx="90.5" cy="27.46666666666667" r="3" class="nv-point nv-point-3" style="stroke-width: 2px;"></circle>
+                                  <circle cx="120.66666666666669" cy="0" r="3" class="nv-point nv-point-4" style="stroke-width: 2px;"></circle>
+                                  <circle cx="150.83333333333334" cy="13.733333333333334" r="3" class="nv-point nv-point-5" style="stroke-width: 2px;"></circle>
+                                  <circle cx="181" cy="68.66666666666667" r="3" class="nv-point nv-point-6" style="stroke-width: 2px;"></circle>
+                                </g>
+                              </g>
+                              <g class="nv-point-paths"></g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g class="nv-legendWrap"></g>
+                  <g class="nv-interactive"></g>
+                </g>
+              </g>
+            </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
   <div class="col-xs-12 col-md-6 m-t-20 m-b-20">
     <canvas id="bar" class="chart chart-bar"
       chart-data="vm.data" chart-labels="vm.labels" chart-series="vm.series">
@@ -7,10 +179,11 @@
 
   <div class="col-xs-12 col-md-6 m-t-20">
     <canvas id="base" class="chart-bar"
-      chart-data="vm.data1" chart-labels="vm.labels1" chart-colors="vm.colors"
+      chart-data="vm.data" chart-labels="vm.labels" chart-colors="vm.colors"
       chart-dataset-override="vm.datasetOverride" >
     </canvas>
   </div>
 
 
+<nvd3 options="options" data="data" class="with-3d-shadow with-transitions"></nvd3>
 </div>

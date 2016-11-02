@@ -1,8 +1,10 @@
 /* ============================================================
  * Directive: pgTab
  * Makes Bootstrap Tabs compatible with AngularJS and add sliding
- * effect for tab transitions. 
+ * effect for tab transitions.
  * ============================================================ */
+ (function () {
+ 'use strict';
 
 angular.module('app')
     .directive('pgTab', ['$parse', function($parse) {
@@ -40,3 +42,5 @@ angular.module('app')
             }
         };
     }]);
+
+})();
