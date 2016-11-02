@@ -51,7 +51,7 @@ gulp.task('less', function () {
     .pipe(gulp.dest(config.pages+'/css/'));
 });
 
-gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts-awesome', 'api', 'mapplic']);
+gulp.task('build', ['css-min', 'compress', 'pages', 'images', 'fonts-awesome', 'api']);
 
 gulp.task('css-min', function() {
   return gulp.src(['node_modules/pace-progress/themes/red/pace-theme-flash.css',
@@ -146,11 +146,6 @@ gulp.task('images', function() {
 gulp.task('api', function() {
   gulp.src(['app/api/**/*'])
       .pipe(gulp.dest('dist/app/api'));
-});
-
-gulp.task('mapplic', function() {
-  gulp.src(['app/js/lib/mapplic/css/images/**/*'])
-      .pipe(gulp.dest('dist/app/js/lib/mapplic/css/images'));
 });
 
 gulp.task('fonts-awesome', function() {
