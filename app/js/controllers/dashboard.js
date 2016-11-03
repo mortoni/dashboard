@@ -1,10 +1,11 @@
 (function () {
 'use strict';
 
-angular.module('app').controller('DashboardCtrl', ['$scope',
-  function($scope) {
+angular.module('app').controller('DashboardCtrl', ['$scope', '$interval', '$http',
+  function($scope, $interval, $http) {
 
     var vm = this;
+    vm.refresh = false;
 
     vm.map_options = {
       source: 'api/dashboard-map.json',
@@ -19,6 +20,20 @@ angular.module('app').controller('DashboardCtrl', ['$scope',
       hovertip: true,
       animate: true
     };
+
+    $scope.$on('$destroy', function() {
+      $interval.cancel(vm.timeout);
+    });
+
+    activate();
+
+    function activate(){
+      vm.timeout = $interval(function () {
+        vm.refresh = !vm.refresh;
+      }, 5000);
+    }
+
+
 
   }]);
 })();

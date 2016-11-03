@@ -24,7 +24,6 @@ angular.module('app').controller('MetricsCtrl', ['$scope', '$http', '$interval',
       $interval.cancel(vm.timeout);
     });
 
-
     activate();
 
     function activate(){

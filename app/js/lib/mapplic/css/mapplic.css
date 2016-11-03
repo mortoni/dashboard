@@ -94,7 +94,7 @@ svg a {
 }
 
 .mapplic-map.mapplic-dragging .mapplic-map-image {
-	cursor: url(images/closedhand.cur), move;
+	/*cursor: url(images/closedhand.cur), move;*/
 }
 
 .mapplic-locations {

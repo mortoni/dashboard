@@ -1,6 +1,6 @@
 /**
  * Mapplic - Custom Interactive Map Plugin by @sekler
- * http://www.mapplic.com 
+ * http://www.mapplic.com
  */
 
 (function($) {
@@ -34,8 +34,14 @@
 
 			self.el = el.addClass('mapplic-element mapplic-loading').height(self.o.height);
 
-			// Process JSON file
+
 			$.getJSON(self.o.source, function(data) { // Success
+
+				for (var i = 0; i < data.levels[0].locations.length; i++) {
+					data.levels[0].locations[i].title = Math.floor((Math.random() * 1000) + 1) + " Employees";
+				}
+
+
 				processData(data);
 				self.el.removeClass('mapplic-loading');
 
@@ -145,7 +151,7 @@
 					});
 
 					this.position(location);
-				
+
 					// Making it visible
 					this.el.stop().fadeIn(200).show();
 				}
@@ -167,7 +173,7 @@
 
 			this.hide = function() {
 				var s = this;
-				
+
 				this.el.stop().fadeOut(300, function() {
 					s.desc.empty();
 				});
@@ -422,7 +428,7 @@
 		// Clear Button
 		function ClearButton() {
 			this.el = null;
-			
+
 			this.init = function() {
 				this.el = $('<a></a>').attr('href', '#').addClass('mapplic-clear-button').click(function(e) {
 					e.preventDefault();
@@ -536,7 +542,7 @@
 							$('<div></div>').addClass('mapplic-map-image').load(source).appendTo(layer);
 							break;
 
-						// Other 
+						// Other
 						default:
 							alert('File type ' + extension + ' is not supported!');
 					}
@@ -550,7 +556,7 @@
 					if (!shownLevel || value.show) {
 						shownLevel = value.id;
 					}
-					
+
 					/* Iterate through locations */
 					$.each(value.locations, function(index, value) {
 						var top = value.y * 100;
@@ -620,12 +626,12 @@
 				self.levelselect.appendTo(self.levels);
 				var down = $('<a href="#"></a>').addClass('mapplic-levels-down').appendTo(self.levels);
 				self.container.append(self.levels);
-			
+
 				self.levelselect.change(function() {
 					var value = $(this).val();
 					level(value);
 				});
-			
+
 				up.click(function(e) {
 					e.preventDefault();
 					if (!$(this).hasClass('disabled')) level('+');
@@ -688,7 +694,7 @@
 					map.data('lastX', x);
 					map.data('lastY', y);
 				});
-			
+
 				$(document).on('mouseup', function(event) {
 					self.x = map.data('lastX');
 					self.y = map.data('lastY');
@@ -753,7 +759,7 @@
 					mapbody.off('touchmove touchend');
 				});
 			});
-			
+
 			// Pinch zoom
 			var mapPinch = Hammer(self.map[0], {
 				transform_always_block: true,
@@ -844,7 +850,7 @@
 			$.each(self.data.levels, function(index, layer) {
 				$.each(layer.locations, function(index, value) {
 					if (value.id == id) {
-						var zoom = typeof value.zoom !== 'undefined' ? value.zoom : 4,		
+						var zoom = typeof value.zoom !== 'undefined' ? value.zoom : 4,
 							drop = self.tooltip.drop / self.contentHeight / zoom;
 
 						level(layer.id);
