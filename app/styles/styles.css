@@ -1,3 +1,5 @@
 .bk-trans{
-  background-color: transparent !important;  
+  background-color: transparent !important;
 }
+
+#mapid { height: 580px; }

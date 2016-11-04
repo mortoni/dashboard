@@ -61,11 +61,11 @@ gulp.task('css-min', function() {
                    'bower_components/angular-material/angular-material.min.css',
                    'bower_components/angular-material-data-table/dist/md-data-table.min.css',
 									 'bower_components/nvd3/build/nv.d3.css',
-									 'app/js/lib/mapplic/css/mapplic.css',
+									 'app/js/lib/mapplic/mapplic.css',
                    'app/styles/pages-icons.css',
 								 	 'app/styles/pages.css',
 							 	 	 'app/styles/styles.css'])
-		.pipe(concatCss('styles-1.0.5.min.css'))
+		.pipe(concatCss('styles-1.0.6.min.css'))
     .pipe(cleanCSS({ keepSpecialComments: 1, processImport: false }))
     .pipe(gulp.dest('dist/app/styles'));
 });
@@ -83,7 +83,8 @@ gulp.task('default', function() {
 });
 
 gulp.task('compress', function() {
-  return gulp.src(['node_modules/jquery/dist/jquery.min.js',
+  return gulp.src(['bower_components/firebase/firebase.js',
+									 'node_modules/jquery/dist/jquery.min.js',
 									 'node_modules/angular/angular.js',
 								   'node_modules/angular-ui-router/release/angular-ui-router.js',
 								 	 'node_modules/angular-ui-grid/ui-grid.js',
@@ -93,9 +94,10 @@ gulp.task('compress', function() {
 									 'app/js/lib/jquery.unveil.min.js',
 									 'app/js/lib/modernizr.custom.js',
 									 'app/js/lib/pages.js',
-									 'app/js/lib/mapplic/js/hammer.js',
-									 'app/js/lib/mapplic/js/jquery.mousewheel.js',
-									 'app/js/lib/mapplic/js/mapplic.js',
+									 'app/js/lib/mapplic/hammer.js',
+									 'app/js/lib/mapplic/jquery.mousewheel.js',
+									 'app/js/lib/mapplic/mapplic.js',
+									 'bower_components/leaflet/dist/leaflet.js',
 									 'bower_components/angular-animate/angular-animate.min.js',
 									 'bower_components/angular-aria/angular-aria.min.js',
 									 'bower_components/angular-material/angular-material.min.js',
@@ -113,7 +115,7 @@ gulp.task('compress', function() {
 									 'app/js/controllers/*.js',
 									 'app/js/services/*.js',
 									 'app/js/directives/*.js'])
-    .pipe(concat('bundle-1.0.5.js'))
+    .pipe(concat('bundle-1.0.6.js'))
     .pipe(ngmin())
     .pipe(gulp.dest('dist/app/js'))
     .pipe(rename({suffix: '.min'}))

@@ -1,8 +1,8 @@
 (function () {
 'use strict';
 
-angular.module('app').controller('DataCtrl', ['$scope','$state', '$timeout', 'issuesSrv',
-  function($scope, $state, $timeout, issuesSrv) {
+angular.module('app').controller('DataCtrl', ['$scope','$state', '$timeout', 'issues',
+  function($scope, $state, $timeout, issues) {
 
     var vm = this;
 
@@ -20,7 +20,7 @@ angular.module('app').controller('DataCtrl', ['$scope','$state', '$timeout', 'is
     acitave();
 
     function acitave(){
-      vm.issues = issuesSrv.get();
+      vm.issues = issues.get();
     }
 
     vm.onPaginate = function(page, limit) {

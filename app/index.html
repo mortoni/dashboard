@@ -23,8 +23,9 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.min.css"/>
 
-    <link rel=" stylesheet" href="bower_components/nvd3/build/nv.d3.css"/>
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css"/>
     <link rel="stylesheet" href="js/lib/mapplic/mapplic.css"/>
+    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
 
     <link rel="stylesheet" href="styles/pages-icons.css"/>
     <link rel="stylesheet" href="styles/pages.css"/>
@@ -41,7 +42,7 @@
 
     <div class="full-height" ui-view></div>
 
-    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/angular/angular.js"></script>
@@ -54,11 +55,8 @@
     <script src="js/lib/jquery.unveil.min.js"></script>
     <script src="js/lib/modernizr.custom.js"></script>
     <script src="js/lib/pages.js"></script>
-    <script src="js/lib/mapplic/hammer.js"></script>
-    <script src="js/lib/mapplic/jquery.mousewheel.js"></script>
-    <script src="js/lib/mapplic/mapplic.js"></script>
 
-
+    <script src="bower_components/leaflet/dist/leaflet.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
@@ -83,6 +81,7 @@
     <script src="js/controllers/metrics.js"></script>
 
     <script src="js/services/issues.js"></script>
+    <script src="js/services/locations.js"></script>
 
     <script src="js/directives/pg-sidebar.js"></script>
     <script src="js/directives/cs-select.js"></script>

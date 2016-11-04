@@ -1,25 +1,12 @@
 (function () {
 'use strict';
 
-angular.module('app').controller('DashboardCtrl', ['$scope', '$interval', '$http',
-  function($scope, $interval, $http) {
+angular.module('app').controller('DashboardCtrl', ['$scope', 'locations', '$interval',
+  function($scope, locations, $interval) {
 
     var vm = this;
-    vm.refresh = false;
-
-    vm.map_options = {
-      source: 'api/dashboard-map.json',
-      height: 503,
-      sidebar: false,
-      minimap: false,
-      locations: true,
-      deeplinking: true,
-      fullscreen: false,
-      developer: false,
-      maxscale: 3,
-      hovertip: true,
-      animate: true
-    };
+    vm.marker = [];
+    vm.flag = true;
 
     $scope.$on('$destroy', function() {
       $interval.cancel(vm.timeout);
@@ -28,12 +15,44 @@ angular.module('app').controller('DashboardCtrl', ['$scope', '$interval', '$http
     activate();
 
     function activate(){
-      // vm.timeout = $interval(function () {
-      //   vm.refresh = !vm.refresh;
-      // }, 5000);
+
+      vm.locations = locations.get();
+
+      vm.map = L.map('mapid').setView([0, 0], 2);
+
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+          maxZoom: 5,
+          id: 'mortoni.2160gf6f',
+          accessToken: 'pk.eyJ1IjoibW9ydG9uaSIsImEiOiJjaXYzOXE0bXYwMWM2Mm90YmV3aGJoYWtvIn0.oVEPUNVTai26CGUQPUIJLQ'
+      }).addTo(vm.map);
+
+      vm.timeout = $interval(function () {
+        if(vm.flag)
+          init(vm.map);
+        update();
+      },5000);
     }
 
+    function init(map) {
+      vm.flag = false;
+      for (var i = 0; i < 5; i++) {
+        var local = vm.locations[Math.floor(Math.random() * vm.locations.length)];
+        local.title = Math.floor((Math.random() * 1000) + 1) + ' Employees';
 
+        vm.marker[i] = L.marker([local.lat, local.long]).addTo(map);
+        vm.marker[i].bindPopup(local.title);
+      }
+    }
+
+    function update(){
+      for (var i = 0; i < 5; i++) {
+        var local = vm.locations[Math.floor(Math.random() * vm.locations.length)];
+        local.title = Math.floor((Math.random() * 1000) + 1) + ' Employees';
+
+        vm.marker[i].setLatLng(new L.LatLng(local.lat, local.long));
+        vm.marker[i].bindPopup(local.title);
+      }
+    }
 
   }]);
 })();

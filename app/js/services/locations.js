@@ -1,9 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('app').factory('issues', [ '$firebaseArray', '$http',
+    angular.module('app').factory('locations', [ '$firebaseArray', '$http',
     function($firebaseArray, $http){
-      var ref = firebase.database().ref().child("issues");
+      var ref = firebase.database().ref().child("locations");
 
       function get(){
         return $firebaseArray(ref);
