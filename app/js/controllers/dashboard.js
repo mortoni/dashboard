@@ -28,9 +28,9 @@ angular.module('app').controller('DashboardCtrl', ['$scope', '$interval', '$http
     activate();
 
     function activate(){
-      vm.timeout = $interval(function () {
-        vm.refresh = !vm.refresh;
-      }, 5000);
+      // vm.timeout = $interval(function () {
+      //   vm.refresh = !vm.refresh;
+      // }, 5000);
     }
 
 

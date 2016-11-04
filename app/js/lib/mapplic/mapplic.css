@@ -32,12 +32,12 @@ svg a {
 }
 
 :-webkit-full-screen .mapplic-fullscreen-button {
-	/*background-image: url(images/fullscreen-exit.png);*/
+	background-image: url(images/fullscreen-exit.png);
 }
 
 /* Preloader */
 .mapplic-element.mapplic-loading {
-	/*background: #f8f8f8 url(images/loader.gif) no-repeat center;*/
+	background: #f8f8f8 url(images/loader.gif) no-repeat center;
 }
 
 .mapplic-element > * {
@@ -85,7 +85,7 @@ svg a {
 }
 
 .mapplic-map-image {
-	/*cursor: url(images/openhand.cur), default;*/
+	cursor: url(images/openhand.cur), default;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -94,7 +94,7 @@ svg a {
 }
 
 .mapplic-map.mapplic-dragging .mapplic-map-image {
-	/*cursor: url(images/closedhand.cur), move;*/
+	cursor: url(images/closedhand.cur), move;
 }
 
 .mapplic-locations {
@@ -174,7 +174,7 @@ svg a {
 /* Clear Button */
 .mapplic-clear-button {
 	background-color: #fff;
-	/*background-image: url(images/target.png);*/
+	background-image: url(images/target.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 10px;
@@ -479,7 +479,7 @@ svg a {
 }
 
 .mapplic-tooltip-triangle {
-	/*background-image: url(images/tooltip-triangle.png);*/
+	background-image: url(images/tooltip-triangle.png);
 	width: 14px;
 	height: 6px;
 	position: absolute;
